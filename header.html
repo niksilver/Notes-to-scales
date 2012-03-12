@@ -4,15 +4,18 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
 	function setDisplayControl(checkbox_name, display_class) {
-		$("input[name='" + checkbox_name + "']").click(function() {
+		var checkbox_selector = "input[name='" + checkbox_name + "']";
+		var display_function = function() {
+			var is_checked = $(checkbox_selector).is(':checked');
 			var display_selector = "." + display_class;
-			var display_was = $(display_selector).css("display");
-			if (display_was == "block") {
-				$(display_selector).css("display", "none"); // Becomes hidden
-			} else {
+			if (is_checked) {
 				$(display_selector).css("display", "block"); // Becomes visible
+			} else {
+				$(display_selector).css("display", "none"); // Becomes hidden
 			}
-		})
+		};
+		display_function();
+		$("input[name='" + checkbox_name + "']").click(display_function);
 	}
 
 	$(document).ready(function() {
@@ -50,8 +53,6 @@
 		G# <input type="checkbox" name="g-sharp-check"/><br/>
 		A# <input type="checkbox" name="a-sharp-check"/><br/>
 </form>
-<div class="note-c">C</div>
-<div class="note-d">D</div>
 
 
 <div class="has-sharps note-c note-d note-e note-f-sharp note-g note-a note-a-sharp">Acoustic scale in C (7): C D E F# G A A#</div>
