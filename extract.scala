@@ -11,8 +11,8 @@ val fields = for (line <- lines; if line.contains("\t1 ")) yield line.split('\t'
 // version of the data with the key names filled in.
 // This is a sequence of pairs (scale_name, degree_string)
 
-val bulked_fields: Seq[Pair[String,String]] = fields.scanLeft(Pair("", ""))(
-	    (a,b) => if (b(0) == "") Pair(a._1+"(2)", b(1)) else Pair(b(0), b(1))
+val bulked_fields: Seq[Pair[String,String]] = fields.scanLeft(("" -> ""))(
+	    (a,b) => if (b(0) == "") (a._1+"(2)" -> b(1)) else (b(0) -> b(1))
 	).tail
 
 // Map scale to degree-strings
@@ -105,6 +105,21 @@ def csv_format(ks: KeyedScale) =
 	ks.notes.length + "," +
 	(note_columns map {n => if (ks.notes contains n) n else "" }).mkString(",")
 
+def html_format(ks: KeyedScale): String = {
+	val note_classes = ks.notes map { note: String =>("note-" + note).
+				replaceAllLiterally("#", "-sharp").
+				replaceAllLiterally("b", "-flat").
+				toLowerCase
+		} mkString(" ")
+	"<div class=\"" +
+		(if (ks.hasSharps) "has-sharps " else "") +
+		(if (ks.hasFlats) "has-flats " else "") +
+		note_classes +
+		"\">" + ks.scale + " in " + ks.tonic + " (" + ks.notes.length + "): " +
+		ks.notes.mkString(" ") +
+		"</div>"
+}
+
 // Print the notes for each scale with each tonic
 
 println("Scale,Key,Has sharps,Has flats,Num pitch classes," +
@@ -121,8 +136,8 @@ scale_tones.toList sortBy { _._1 } foreach { scale_tone_seq =>
 		val ks_flattened = new KeyedScale(scale,
 					note_using_flats(tonic_name),
 					note_using_flats(keyed_notes))
-		println(csv_format(ks))
+		println(html_format(ks))
 		if (ks.hasSharps)
-			println(csv_format(ks.flatCopy))
+			println(html_format(ks.flatCopy))
 	}
 }
