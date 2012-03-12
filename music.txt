@@ -1,0 +1,240 @@
+List of musical scales and modes								x
+Name	Degrees	# of pitch classes	Lower tetrachord	Upper tetrachord	Usual or unusual key signature		Spaced degrees	Half tones
+17 equal temperament	—	17	—	—	—			
+Acoustic scale	1 2 3 #4 5 6 b7	7	whole tone	Dorian			 1 2 3 #4 5 6 b7 	0
+								
+								
+								
+								
+Adonai malakh mode	1 2 3 4 5 b6 b7	7	Lydian	Phrygian	Unusual			
+								
+								
+								
+								
+Aeolian mode or natural minor scale	1 2 b3 4 5 b6 b7	7	Dorian	Phrygian	Usual			
+								
+								
+								
+								
+Algerian scale	1 2 b3 #4 5 b6 7	variable	—	—				
+								
+								
+								
+Alpha scale	—	15.39	—	—	—			
+Altered scale	1 b2 b3 b4 b5 b6 b7	7		whole tone				
+								
+								
+								
+								
+Augmented scale	1 b3 3 5 #5 7	6	—	—				
+								
+								
+								
+								
+Bebop dominant scale	1 2 3 4 5 6 b7 7	8	—	—				
+								
+								
+								
+Beta scale	—	18.75	—	—	—			
+Blues scale	1 b3 4 #4 5 b7	6	—	—				
+								
+								
+								
+								
+Bohlen-Pierce scale	—	—	—	—	—			
+Chromatic scale	1 #1 2 #2 3 4 #4 5 #5 6 #6 7	12	—	—	—			
+	7 b7 6 b6 5 b5 4 3 b3 2 b2 1							
+								
+Delta scale	—	85.7	—	—	—			
+Dorian mode	1 2 b3 4 5 6 b7	7	Dorian	Dorian	Usual			
+								
+								
+								
+								
+Double harmonic scale	1 b2 3 4 5 b6 7	7		Mixolydian	Unusual			
+								
+								
+								
+								
+Enigmatic scale	1 b2 3 #4 #5 #6 7	7			Unusual			
+								
+								
+								
+								
+Euler–Fokker genus	—	6	—	—	—			
+Flamenco mode	1 b2 3 4 5 b6 7	7	Phrygian	Phrygian	Unusual			
+								
+								
+								
+								
+Gamma scale	—	34.29	—	—	—			
+Gypsy scale	1 2 b3 #4 5 b6 b7	7		Phrygian	Unusual			
+								
+								
+								
+								
+Half diminished scale	1 2 b3 4 b5 b6 b7	7		whole tone				
+								
+								
+								
+								
+Harmonic major scale	1 2 3 4 5 b6 7	7	Lydian	Mixolydian				
+								
+								
+								
+								
+Harmonic minor scale	1 2 b3 4 5 b6 n7	7	Dorian	Mixolydian				
+								
+								
+								
+								
+Harmonic Scale	—	144	—	—	—			
+								
+								
+Hexany	—	—	—	—	—			
+Hirajoshi scale	1 2 b3 5 b6	5	—	—	—			
+								
+								
+								
+								
+Hungarian gypsy scale	1 2 b3 #4 5 b6 7	7		Mixolydian	Unusual			
+								
+								
+								
+								
+Hungarian minor scale	1 2 b3 #4 5 b6 7	7		Mixolydian				
+								
+								
+								
+								
+In scale	1 b2 4 5 b6	5	—	—				
+								
+								
+Insen scale	1 b2 4 5 b7	5	—	—	—			
+								
+								
+								
+								
+Ionian mode or major scale	1 2 3 4 5 6 7	7	Lydian	Lydian	Usual			
+								
+								
+								
+								
+Istrian scale	1 b2 b3 b4 b5 5	6	—	—	—			
+								
+								
+								
+Iwato scale	1 b2 4 b5 b7	5	—	—	—			
+								
+								
+								
+								
+Locrian mode	1 b2 b3 4 b5 b6 b7	7	Phrygian	whole tone	Usual			
+								
+								
+								
+								
+Lydian augmented scale	1 2 3 #4 #5 6 7	7	whole tone					
+								
+								
+								
+								
+Lydian mode	1 2 3 #4 5 6 7	7	whole tone	Lydian	Usual			
+								
+								
+								
+								
+Major bebop scale	1 2 3 4 5 #5 6 7	7(8)	—	—				
+								
+								
+								
+Major Locrian scale	1 2 3 4 b5 b6 b7	7	Lydian	whole tone				
+								
+								
+								
+								
+Major pentatonic scale	1 2 3 5 6	5	—	—	Usual			
+								
+								
+Melodic minor scale	1 2 b3 4 5 n6 n7 8 b7 b6 5 4 b3 2 1	9	Dorian	—				
+								
+								
+								
+								
+Melodic minor scale (ascending)	1 2 b3 4 5 6 7	7	Dorian					
+								
+								
+								
+								
+Minor pentatonic scale	1 b3 4 5 b7	5	—	—	Usual			
+								
+								
+Mixolydian mode	1 2 3 4 5 6 b7	7	Lydian	Mixolydian	Usual			
+								
+								
+								
+								
+Neapolitan major scale	1 b2 b3 4 5 6 7	7	Phrygian	Lydian	Unusual			
+								
+								
+								
+								
+Neapolitan minor scale	1 b2 b3 4 5 b6 7	7	Phrygian	Mixolydian	Unusual			
+								
+								
+								
+								
+Non-Pythagorean scale	—	—	—	—	—			
+Octatonic scale	1 2 b3 4 b5 b6 6 7	8	—	—				
+	1 b2 b3 3 #4 5 6 b7							
+								
+								
+								
+								
+								
+Pelog	—	—	—	—	—			
+Persian scale	1 b2 3 4 b5 b6 7	7						
+								
+								
+								
+								
+Phrygian dominant scale	1 b2 3 4 5 b6 b7	7		Phrygian	Unusual			
+								
+								
+Phrygian mode	1 b2 b3 4 5 b6 b7	7	Phrygian	Phrygian	Usual			
+								
+								
+								
+								
+Prometheus scale	1 2 3 b4 6 b7	6	—	—				
+								
+								
+								
+								
+Scale of harmonics	—	—	—	—	—			
+								
+								
+								
+								
+Slendro	—	5	—	—	—			
+								
+								
+								
+								
+Tritone scale	1 b2 3 b5 5 b7	7	—	—				
+								
+								
+								
+								
+Ukrainian Dorian scale	1 2 b3 #4 5 6 b7	7	—	Dorian	Unusual			
+								
+								
+								
+								
+Whole tone scale	1 2 3 #4 #5 #6	6	—	—				
+								
+								
+								
+								
+Yo scale	1 b3 4 5 7	5	—	—				
+								
