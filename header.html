@@ -2,6 +2,9 @@
 <head>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="jquery.rule-1.0.2-min.js"></script>
+<!-- http://flesler.blogspot.com/2007/11/jqueryrule.html -->
 <script type="text/javascript">
 	function setDisplayControl(checkbox_name, display_class) {
 		var checkbox_selector = "input[name='" + checkbox_name + "']";
@@ -9,9 +12,13 @@
 			var is_checked = $(checkbox_selector).is(':checked');
 			var display_selector = "." + display_class;
 			if (is_checked) {
-				$(display_selector).css("display", "block"); // Becomes visible
+				// Make it visible by removing any such rule
+				// $.rule(display_selector, 'style').remove();
+				$.rule('#ff', 'style').append('color: black');
+				$.rule(display_selector, 'style').text('');
 			} else {
-				$(display_selector).css("display", "none"); // Becomes hidden
+				// Specific rule to make it hidden
+				$.rule(display_selector, 'style').text('display: none');
 			}
 		};
 		display_function();
@@ -34,11 +41,20 @@
 		setDisplayControl('a-sharp-check', 'note-a-sharp');
 	});
 </script>
+<style type="text/css">
+		.note-c { }
+		.note-d { }
+		.note-e { }
+		.note-f { }
+		.note-g { }
+		.note-a { }
+		.note-b { }
+</style>
 </head>
 <body>
 
 
-<form>
+<form id="ff">
 		C <input type="checkbox" name="c-check"/><br/>
 		D <input type="checkbox" name="d-check"/><br/>
 		E <input type="checkbox" name="e-check"/><br/>
