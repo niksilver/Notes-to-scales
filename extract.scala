@@ -111,7 +111,7 @@ def html_format(ks: KeyedScale): String = {
 				replaceAllLiterally("b", "-flat").
 				toLowerCase
 		} mkString(" ")
-	"<div class=\"" +
+	"<div class=\"keyed-scale " +
 		(if (ks.hasSharps) "has-sharps " else "") +
 		(if (ks.hasFlats) "has-flats " else "") +
 		note_classes +
