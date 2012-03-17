@@ -14,16 +14,39 @@
 			var name = elt.attr('name');
 			selector += is_checked ? "[class~='" + name + "']" : "";
 		});
-		$('#display-control').text(selector + " { display: block }");
+		$('style#display-control').text(selector + " { display: block }");
+	}
+	function notesToggler(name) {
+		return function() {
+			var elt = $('form#control input[name="' + name + '"]');
+			var status = elt.is(':checked');
+			$('form#notes input.' + name).each(function(i) {
+				$(this).prop('checked', status);
+			});
+			displayScales();
+		};
 	}
 
 	$(document).ready(function() {
 		$('form#notes input').each(function(i) {
 			$(this).click(displayScales); })
+
+		$('form#control input[name="natural"]').click(notesToggler('natural'));
+		$('form#control input[name="sharp"]').click(notesToggler('sharp'));
+		$('form#control input[name="flat"]').click(notesToggler('flat'));
+
 		displayScales();
 	});
 </script>
 <style type="text/css">
+	#notes span { padding-right: 8px }
+	#notes #notes-inputs { padding-bottom: 10px }
+	#notes { margin-bottom: 8px }
+
+	#control span { padding-right: 10px }
+	#control { margin-bottom: 20px }
+
+	/* Default is to not display a keyed scale */
 	.keyed-scale { display: none }
 </style>
 <style type="text/css" id="display-control">
@@ -31,29 +54,50 @@
 </head>
 <body>
 
+<h2>Notes to scales</h2>
+
+<p>
+Select what notes you want in your scale and see what scales, in what
+keys, will allow them. Scale information scraped and munged from
+<a href="http://en.wikipedia.org/wiki/List_of_musical_scales_and_modes">
+Wikipedia</a>.
+</p>
+
 <form id="notes">
-		C <input type="checkbox" name="note-c" checked/><br/>
-		D <input type="checkbox" name="note-d" checked/><br/>
-		E <input type="checkbox" name="note-e" checked/><br/>
-		F <input type="checkbox" name="note-f" checked/><br/>
-		G <input type="checkbox" name="note-g" checked/><br/>
-		A <input type="checkbox" name="note-a" checked/><br/>
-		B <input type="checkbox" name="note-b" checked/><br/>
+	<div id="notes-inputs">
+	<span>C<input type="checkbox" name="note-c" class="natural" checked/></span>
+	<span>D<input type="checkbox" name="note-d" class="natural" checked/></span>
+	<span>E<input type="checkbox" name="note-e" class="natural" checked/></span>
+	<span>F<input type="checkbox" name="note-f" class="natural" checked/></span>
+	<span>G<input type="checkbox" name="note-g" class="natural" checked/></span>
+	<span>A<input type="checkbox" name="note-a" class="natural" checked/></span>
+	<span>B<input type="checkbox" name="note-b" class="natural" checked/></span>
+	</div>
 
-		C# <input type="checkbox" name="note-c-sharp"/><br/>
-		D# <input type="checkbox" name="note-d-sharp"/><br/>
-		F# <input type="checkbox" name="note-f-sharp"/><br/>
-		G# <input type="checkbox" name="note-g-sharp"/><br/>
-		A# <input type="checkbox" name="note-a-sharp"/><br/>
+	<div id="notes-inputs">
+	<span>C# <input type="checkbox" name="note-c-sharp" class="sharp"/></span>
+	<span>D# <input type="checkbox" name="note-d-sharp" class="sharp"/></span>
+	<span>F# <input type="checkbox" name="note-f-sharp" class="sharp"/></span>
+	<span>G# <input type="checkbox" name="note-g-sharp" class="sharp"/></span>
+	<span>A# <input type="checkbox" name="note-a-sharp" class="sharp"/></span>
+	</div>
 
-		Db <input type="checkbox" name="note-d-flat"/><br/>
-		Eb <input type="checkbox" name="note-e-flat"/><br/>
-		Gb <input type="checkbox" name="note-g-flat"/><br/>
-		Ab <input type="checkbox" name="note-a-flat"/><br/>
-		Bb <input type="checkbox" name="note-b-flat"/><br/>
+	<div id="notes-inputs">
+	<span>Db <input type="checkbox" name="note-d-flat" class="flat"/></span>
+	<span>Eb <input type="checkbox" name="note-e-flat" class="flat"/></span>
+	<span>Gb <input type="checkbox" name="note-g-flat" class="flat"/></span>
+	<span>Ab <input type="checkbox" name="note-a-flat" class="flat"/></span>
+	<span>Bb <input type="checkbox" name="note-b-flat" class="flat"/></span>
+	</div>
 </form>
 
-<div id="ii"></div>
+<form id="control">
+		<span>Naturals <input type="checkbox" name="natural"/></span>
+		<span>Sharps <input type="checkbox" name="sharp"/></span>
+		<span>Flats <input type="checkbox" name="flat"/></span>
+</form>
+
+<div id="info"></div>
 
 <div class="keyed-scale has-sharps note-c note-d note-e note-f-sharp note-g note-a note-a-sharp">Acoustic scale in C (7): C D E F# G A A#</div>
 <div class="keyed-scale has-flats note-c note-d note-e note-g-flat note-g note-a note-b-flat">Acoustic scale in C (7): C D E Gb G A Bb</div>
